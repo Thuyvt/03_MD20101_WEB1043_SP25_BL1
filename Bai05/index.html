@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bảng xếp hạng</h1>
+    <div>
+        <img id="anh-thu-nhat" src="img/logo-mu.jpeg" alt=""
+         style="max-width: 300px; max-height: 200px;">
+    </div>
+
+    <p id="thu-nhat" class="top4">Man city</p>
+    <p id="thu-hai" class="top4">Totenham</p>
+    <p id="thu-ba" class="top4">Arsenal</p>
+    <p id="thu-tu" class="top4">Liverpool</p>
+
+    <button onclick="hamTestSuKien()">Gọi function</button>
+
+    <button onclick="hamDoiMau()">Đổi màu</button>
+    <script>
+
+
+        // Lưu ý
+        // Code HTML, JS sẽ chạy tuần tự từ trên xuống
+        // nên viết code js ở vị trí không hợp lý thì sẽ xuất hiện null
+        // 1.Lấy thông tin node
+        console.log("// Lấy thong tin node theo id");
+        console.log(document.getElementById("thu-nhat"));
+        console.log(document.getElementById("thu-ba"));
+
+        console.log("// Lấy thông tin node theo class");
+        console.log(document.getElementsByClassName("top4")); // trả về mảng 4 thẻ p
+        console.log(document.getElementsByClassName("top4")[0]); // lấy ra node thứ 1
+        console.log(document.getElementsByClassName("top4").item(0)); // cách khác để lấy node thứ 1
+
+        console.log("// Lấy thông tin node theo tag name");
+        console.log(document.getElementsByTagName("p"));
+
+        let nodeThuTu = document.getElementById("thu-tu");
+        console.log(nodeThuTu);
+        // 2. Sửa thông tin của node
+        // Sử dụng innerText
+        nodeThuTu.innerText = "MU";
+        nodeThuTu.innerText = "<h1>MU</h1>";
+
+        // Sử dụng innerHTML
+        nodeThuTu.innerHTML = "<h1>MU</h1>";
+
+        // Phân biệt innerText và innerHTML
+        // Khi nào muốn thay thẻ html trong node => dùng innerHTML
+        // Khi nào chỉ muốn sửa text => dùng innerText
+
+        // 3. Sửa thuộc tính của node
+        // a. Sửa thuộc tính style
+        let nodeThuNhat = document.getElementById("thu-nhat");
+        nodeThuNhat.style = "color: green;font-size: 20px;";
+
+        // Bổ sung thêm giá trị cho style
+        nodeThuNhat.style.background="gray"; // C1
+        nodeThuNhat.style["background"] = "red"; // C2
+
+        // b. Thay đổi thuộc tính src cho ảnh
+        // Lấy được thông tin của node
+        let nodeAnhThuNhat = document.getElementById("anh-thu-nhat");
+        console.log(nodeAnhThuNhat);
+        // Sửa nội dung thuộc tính src
+        nodeAnhThuNhat.src = "img/logo-liver.jpeg";
+
+        // 4. Bắt sự kiện tương tác của người dùng
+        // Có các sự kiện: click, hover, enter, lăn chuột ...
+        
+        // Demo sự kiện click của người dùng
+
+        // Khai báo function
+        function hamTestSuKien() {
+            console.log("Bạn đã gọi được hàm");
+        }
+
+        // Đổi màu chữ tottenham
+        function hamDoiMau() {
+            document.getElementById("thu-hai").style["color"] = "red";
+        }
+
+        // Chạy vòng lặp hàm theo khoảng thời gian xác định
+        function hamKiemTraVongLap() {
+            console.log("Bạn gọi hàm kiểm tra vòng lặp");
+        } 
+
+        // setInterval(thamso1, thamso2);
+        // thamSo1: tên hàm gọi để thực hiện lặp
+        // thamSo2: thời gian vòng lặp diễn ra mls( 1s = 1000mls)
+        // setInterval(hamKiemTraVongLap, 1000);
+        // cứ 1s thì gọi hàm hamKiemTraVongLap 1 lần
+
+        // Ứng dụng là hiệu ứng thay đổi nội dung tự động
+        function hienThiLanLuot() {
+            setInterval(() => {
+                setTimeout(() => {
+                    console.log("Nội dung 1");
+                }, 1000)
+                setTimeout(()=> {
+                    console.log("Nội dung 2");
+                }, 2000)
+                setTimeout(()=> {
+                    console.log("Nội dung 3");
+                }, 3000)
+            }, 3000);
+        }
+        hienThiLanLuot();
+    </script>
+
+</body>
+</html>
