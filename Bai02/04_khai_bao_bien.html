@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("DEMO ĐẶT TÊN BIẾN");
+        // đặt tên theo quy tắc lowerCamelCase
+        let tenTruong = "FPT poly";
+        let tenLop = "JS cơ bản";
+
+        // Cách đặt tên biến khác
+        let ten_truong = "FPT poly TVB";
+
+        // Các cách khai báo biến
+        // 3 kiểu khai báo biến
+        // 1. let: dùng để khai báo biến cục bộ, có phạm vi hoạt động trong 1 scope {}
+        // 2. var: dùng để khai báo biến toàn cục, có phạm vi hoạt đông trong toàn bộ file
+        // 3. const: dùng để khai báo hằng số, biến số có giá trị không đổi
+
+        // DEMO DÙNG CONST
+        const bienHangSo = "Phụ nữ luôn đúng";
+        console.log(bienHangSo);
+        // bienHangSo = "Phụ nữ có thể sai";
+
+        // DEMO DÙNG LET
+        {
+            let bienCucBo01 = "Đây là biến cục bộ";
+            console.log(bienCucBo01);
+        }
+        // console.log(bienCucBo01); // lỗi biến không tồn tại
+
+        // DEMO DÙNG VAR
+        {
+            var bienToanCuc01 = "Đây là biến toàn cục";
+            console.log(bienToanCuc01);
+        }
+        console.log(bienToanCuc01);
+
+        // LƯU Ý
+        // 1. Nên đặt tên theo coding convension của js
+        // 2. Hãy dùng const khi biến có giá trị không đổi
+        // 3. Nên dùng let nhiều nhất có thể
+        // 4. Không dùng let được thì mới dùng var
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

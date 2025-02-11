@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Mảng trong javascript
+    console.log("====== DEMO ARRAY =====");
+
+    // 1. Cách khai báo mảng
+    // C1:
+    let tenArr = ["Chúc", "Thuần", "Khải"];
+    let tuoiArr = [18, 20, 21];
+
+    console.log(tenArr);
+    console.log(tuoiArr);
+    // C2: 
+    let tenLopArr = new Array("JS cơ bản", "JS nâng cao", "PhP cơ bản");
+    console.log(tenLopArr);
+
+    // 2. Lấy ra giá trị 1 phần tử trong mảng
+    // Tenmang[index]
+    console.log(tenArr[1]); // KQ: Thuần
+    console.log(tenLopArr[0]); // KQ: JS cơ bản
+
+    // Ghi đè giá trị vào 1 phần tử trong mảng
+    tenArr[1] = "Thúy";
+    console.log("Giá trị mảng mới:" + tenArr);
+
+    // Giới thiệu thuộc tính và phương  thức của mảng
+    // thuộc tính lengt | đếm số lượng phần tử của mảng
+    console.log("Số lượng phần tử mảng tenArr:" + tenArr.length);
+
+    // push(): thêm phần tử mới vào mảng
+    tenArr.push("Duy"); // thêm phần tử vào cuối mảng
+    console.log(tenArr); // KQ: ??
+
+    // unshift(): chèn một phần tử nữa lên đầu tiên
+    tenArr.unshift("Duy Đứng Đầu");
+    console.log(tenArr); // KQ: ??
+
+    // Phương thức xóa
+    tenArr.pop(); // Xóa phần tử cuối trong mảng
+    console.log("pop():" + tenArr);
+    
+    tenArr.shift(); // xóa phần tử đầu tiên
+    console.log("shift:" + tenArr);
+
+    // splice(vị trí bắt đầu xóa, số lượng ptu cần xóa,[ptu mới 1,  ptu mới 2..])
+    tenArr.splice(1, 1);
+    console.log("splice:" + tenArr);
+
+    // thêm phần tử vào giữa
+    tenArr.splice(1, 0, "An", "Mẫn", "An");
+    console.log("splice2:" +tenArr);
+    
+    // tìm vị trí phần tử trong mảng
+    // indexOf: trả về vị trí đầu tiên của phần tử xuất hiện trong mảng
+    // lastIndexOf: trả về vị trí cuối cùng phần tử xuất hiện trong mảng
+    console.log(tenArr.indexOf("An")); // KQ: ??
+    console.log(tenArr.lastIndexOf("An"));
+</script>
+</html>

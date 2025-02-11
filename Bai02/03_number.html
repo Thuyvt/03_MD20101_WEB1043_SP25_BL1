@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("DEMO NUMBER");
+        let namSinh = 2000;
+        let diemSo = 9.9;
+
+        console.log(namSinh);
+        console.log(diemSo);
+
+        // có thể sử dụng toán tử hoặc các hàm tính toán với biến dạng số
+        console.log("tuổi:" + (2025-namSinh));
+
+        // isNaN: kiểm tra biến/ gtra tri khong phải là là số
+        console.log(isNaN(namSinh)); // KQ: false
+        console.log(isNaN("Hai nghìn")); // KQ: true
+
+        // typeof: kiểm tra kiểu dữ liệu của biến
+        console.log(typeof(namSinh)); // number
+        console.log(typeof(diemSo)); // number
+        console.log(typeof("2000")); 
+        
+        // Ép kiểu chuỗi thành số
+        let tuoi = "18"; // string
+        console.log(typeof(tuoi)); // KQ: string
+        let tuoiNum = Number(tuoi);
+        console.log(typeof(tuoiNum)); // KQ: ??
+        // toString() 
+        let tuoiStr = tuoiNum.toString();
+        let tuoiStr2 = tuoiNum + "";
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
