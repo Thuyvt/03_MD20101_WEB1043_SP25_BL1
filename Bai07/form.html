@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        .error-mes {
+            color: red;
+            display: none;
+            /*  ẩn text đi: display: none; */
+            /* hiển thị text đang ẩn: display: block; */
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return false">
+        <h1>FROM NHẬP THÔNG TIN SINH VIÊN</h1>
+        <!-- Họ tên -->
+        Họ và tên : <input type="text" id="ten-sv-id"> <br>
+        <div id="ten-bat-buoc" class="error-mes">
+            Tên sinh viên là thông tin bắt buộc
+        </div>
+        <!-- Quê quán -->
+        Quê quán:
+        <select name="" id="que-quan-id">
+            <option value="">-Chọn quê quán</option>
+            <option value="1">Hà Nội</option>
+            <option value="2">Hải Phòng</option>
+            <option value="3">Hồ Chí Minh</option>
+        </select>
+        <br>
+        <div class="error-mes" id="que-quan-bat-buoc">
+            Quê quán là thông tin bắt buộc nhập
+        </div>
+        <!-- Năm sinh -->
+        Năm sinh: <input type="text" id="nam-sinh-id"> <br>
+        <div class="error-mes" id="nam-sinh-bat-buoc">
+            Năm sinh là thông tin bắt buộc
+        </div>
+        <div class="error-mes" id="nam-sinh-la-so">
+            Năm sinh phải là số
+        </div>
+        <div class="error-mes" id="nam-sinh-khong-hop-le">
+            Sinh viên phải trên 18 tuổi
+        </div>
+        <!-- SDT -->
+        Số điện thoại: <input type="text" id="so-dien-thoai-id"><br>
+        <div class="error-mes" id="sdt-bat-buoc">
+            Số điện thoại là thông tin bắt buộc
+        </div>
+        <div class="error-mes" id="sdt-phai-la-so">
+            Số điện thoại phải là số
+        </div>
+        <div class="error-mes" id="sdt-10-ky-tu">
+            Số điện thoại phải gồm 10 ký tự
+        </div>
+        <!-- Giới tính -->
+        Giới tính: 
+        <input type="radio" name="gioi-tinh" value="1"> Nam
+        <input type="radio" name="gioi-tinh" value="2"> Nữ
+        <input type="radio" name="gioi-tinh" value="3"> Khác
+        <br>
+        <div class="error-mes" id="gioi-tinh-bat-buoc">
+            Giới tính là thông tin bắt buộc
+        </div>
+        <!-- Email -->
+        Email:
+        <input type="email" name="" id="email-id"> <br>
+        <div class="error-mes" id="email-bat-buoc">
+            Email là thông tin bắt buộc
+        </div>
+        <div class="error-mes" id="email-khong-hop-le">
+            Email không đúng định dạng
+        </div>
+        <!-- Sở thích -->
+        Sở thích: 
+        <input type="checkbox" name="so-thich" id=""> Du lịch
+        <input type="checkbox" name="so-thich" id=""> Game 
+        <input type="checkbox" name="so-thich" id=""> Đọc sách
+        <br>
+        <div class="error-mes" id="so-thich-bat-buoc">
+            Sở thích là thoog tin bắt buộc
+        </div>
+        <!-- Học phí -->
+        Học phí:
+        <input type="text" id="hoc-phi-id"> <br>
+        <div class="error-mes" id="hoc-phi-bat-buoc">
+            Học phí là thông tin bắt buộc
+        </div>
+        <div class="error-mes" id="hoc-phi-la-so">
+            Học phí phải là số lớn hơn 0
+        </div>
+        <button type="submit" onclick="kiemTra()"> Lưu thông in</button>
+    </form>
+</body>
+</html>
