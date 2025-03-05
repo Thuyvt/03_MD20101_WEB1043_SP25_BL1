@@ -71,6 +71,54 @@ function kiemTra() {
         // ẩn lỗi
         document.getElementById("gioi-tinh-bat-buoc").style.display = "none";
     }
+
+    // EMAIL
+    let email = document.getElementById("email-id").value.trim();
+    console.log("email-id", email);
+    if (email === "") {
+        document.getElementById("email-bat-buoc").style.display = "block";
+    } 
+    else if (!email.includes("@") || !email.includes(".")
+    || email.indexOf("@") > email.indexOf(".")) {
+        document.getElementById("email-khong-hop-le").style.display = "block";
+    }
+    else  {
+        document.getElementById("email-bat-buoc").style.display = "none";
+        document.getElementById("email-khong-hop-le").style.display = "none";
+    }
+
+    // Sở thích
+    let nodeSoThich = document.getElementsByName("so-thich");
+    console.log('so-thich', nodeSoThich);
+    let soThich = [];
+
+    // duyệt node 
+    for( let node of nodeSoThich) {
+        // nếu node được checked thì đưa value của node vào mảng soThich
+        if (node.checked) {
+            soThich.push(node.value);
+        }
+    }
+    // hiển thị danh sách sở thích đã chọn
+    console.log("soThich", soThich);
+
+    // Kiểm tra lỗi bắt buộc phải chọn 
+    if (soThich.length < 1) {
+        // hiển thị lỗi
+    } else {
+        // ẩn lỗi
+    }
+
+    // HỌC PHÍ
+    let hocPhi = document.getElementById("hoc-phi-id").value.trim();
+    if (hocPhi ==="") {
+        document.getElementById("hoc-phi-bat-buoc").style.display = "block";
+    } else if (isNaN(hocPhi) || Number(hocPhi) <= 0) {
+        document.getElementById("hoc-phi-la-so").style.display = "block";
+    } else {
+        document.getElementById("hoc-phi-bat-buoc").style.display = "none";
+        document.getElementById("hoc-phi-la-so").style.display = "none";
+    }
 }   
 
 
@@ -78,3 +126,16 @@ function kiemTra() {
 // false khi input không hợp lệ
 // return false để màn hình không tự f5
 // chỉ return true, khi dữ liệu hợp lệ và gửi lên form
+function changeQueQuan() {
+    console.log("Thay đổi option trong select");
+    let queQuan = document.getElementById("que-quan-id").value;
+    console.log(queQuan);
+    // kiểm tra giá trị quê quán để chèn value vào ô input hoc-phi-id
+    if (queQuan === "1") {
+        document.getElementById("hoc-phi-id").value = 50000000;
+    } else if (queQuan === "2") {
+        document.getElementById("hoc-phi-id").value = 30000000;
+    } else if (queQuan == "3") {
+        document.getElementById("hoc-phi-id").value = 40000000;
+    }
+}

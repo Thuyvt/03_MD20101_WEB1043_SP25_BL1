@@ -24,7 +24,7 @@
         </div>
         <!-- Quê quán -->
         Quê quán:
-        <select name="" id="que-quan-id">
+        <select name="" id="que-quan-id" onchange="changeQueQuan()">
             <option value="">-Chọn quê quán</option>
             <option value="1">Hà Nội</option>
             <option value="2">Hải Phòng</option>
@@ -76,16 +76,16 @@
         </div>
         <!-- Sở thích -->
         Sở thích: 
-        <input type="checkbox" name="so-thich" id=""> Du lịch
-        <input type="checkbox" name="so-thich" id=""> Game 
-        <input type="checkbox" name="so-thich" id=""> Đọc sách
+        <input type="checkbox" name="so-thich" id="" value="Du lịch"> Du lịch
+        <input type="checkbox" name="so-thich" id="" value="Game"> Game 
+        <input type="checkbox" name="so-thich" id="" value="Đọc sách"> Đọc sách
         <br>
         <div class="error-mes" id="so-thich-bat-buoc">
             Sở thích là thoog tin bắt buộc
         </div>
         <!-- Học phí -->
         Học phí:
-        <input type="text" id="hoc-phi-id"> <br>
+        <input type="text" id="hoc-phi-id" value=""> <br>
         <div class="error-mes" id="hoc-phi-bat-buoc">
             Học phí là thông tin bắt buộc
         </div>
